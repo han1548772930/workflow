@@ -1,4 +1,4 @@
-import { IWorkFlowNode, NodeType } from "./workflow"
+import { IWorkFlowNode, NodeType, SelectRangeEnum } from "./workflow"
 import { DefineComponent } from "vue";
 
 
@@ -11,7 +11,7 @@ export interface INodeMaterial {
     //图标
     icon?: DefineComponent | undefined,
     //默认配置
-    defaultConfig?: { nodeType: NodeType | string }
+    defaultConfig?: { nodeType: NodeType | string, nodeUsers?: [], selectRange?: SelectRangeEnum }
     //创建一个默认节点，跟defaultCofig只选一个
     createDefault?: () => IWorkFlowNode
     //从物料面板隐藏，比如发起人节点、条件分支内的分支节点

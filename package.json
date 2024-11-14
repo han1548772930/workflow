@@ -10,13 +10,21 @@
   },
   "dependencies": {
     "@ant-design/icons-vue": "^7.0.1",
+    "@grapecity/activereports": "^5",
+    "@grapecity/activereports-localization": "^5",
+    "@grapecity/activereports-vue": "^5",
+    "@vueuse/core": "^10.11.0",
     "ant-design-vue": "^4.2.3",
+    "axios": "^1.7.2",
+    "crypto-js": "^4.2.0",
     "pinia": "^2.1.7",
     "unplugin-vue-components": "^0.27.0",
     "uuid": "^10.0.0",
-    "vue": "^3.4.29"
+    "vue": "^3.4.29",
+    "vue-router": "^4.4.0"
   },
   "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
     "@types/node": "^20.14.8",
     "@types/uuid": "^10.0.0",
     "@vitejs/plugin-vue": "^5.0.5",

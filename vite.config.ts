@@ -5,6 +5,10 @@ import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers'
 import { fileURLToPath } from 'url';
 // https://vitejs.dev/config/
 export default defineConfig({
+    base: '/Workflow',
+    build: {
+        outDir: './dist/Workflow'
+    },
     plugins: [vue(),
     Components({
         resolvers: [AntDesignVueResolver()]

@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue'
+
 import { Button, Space } from 'ant-design-vue';
 
 const props = defineProps<{

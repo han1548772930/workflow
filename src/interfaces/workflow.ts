@@ -24,8 +24,63 @@ export interface ISnapshot {
     //是否校验过
     validated?: boolean,
 }
+export enum SelectRangeEnum {
+    //所有人
+    all = 1,
+    //指定人员
+    user = 2,
+    //指定角色
+    role = 3,
+    //發起人
+    starter = 4,
+    //制单人
+    originator = 5,
+    //上级主管
+    supervisor = 6,
+
+}
 
 
+export enum ExamineModeEnum {
+    //1.依次审批 2.会签 3.或签
+    //依次审批
+    sequence = 1,
+    //会签
+    countersign = 2,
+    //或签
+    sign = 3,
+
+}
+
+export enum NodeUserTypeEnum {
+    //指定人员
+    user = 1,
+    //指定角色
+    role = 2,
+    //發起人
+    starter = 3,
+}
+
+//节点类型 0.发起人 1.审批 2.抄送 3.条件 4.路由 99.流程结束
+export enum NodeTypeEnum {
+    //发起人
+    starter = 0,
+    //审批
+    approver = 1,
+    //抄送
+    notifier = 2,
+    //条件
+    condition = 3,
+    //路由
+    route = 4,
+    //流程结束
+    end = 99,
+}
+
+export interface NodeUsersList {
+    targetId: number
+    type: number
+}
 
 //审批流节点
 export interface IWorkFlowNode<Config = unknown> {
@@ -37,11 +92,12 @@ export interface IWorkFlowNode<Config = unknown> {
     nodeType: NodeType
     //描述
     desc?: string
-
+    type?: NodeTypeEnum
     //子节点
     childNode?: IWorkFlowNode
-
-
+    selectRange?: SelectRangeEnum
+    nodeUsers?: NodeUsersList[]
+    examineMode?: ExamineModeEnum
     remark?: string
     //配置
     config?: Config,

@@ -44,7 +44,7 @@ const useNodeStore = defineStore('node', {
             this.node = node;
         },
         getMaterialByNodeType(nodeType: NodeType): INodeMaterial | undefined {
-            return this.materials.find((material: { defaultConfig: { nodeType: NodeType; }; }) => material.defaultConfig?.nodeType === nodeType)
+            return this.materials.find(material => material.defaultConfig?.nodeType === nodeType)
         },
         addNode(parentId: string, newNode: IWorkFlowNode) {
             this.backup();

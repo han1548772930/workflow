@@ -1,4 +1,4 @@
-import { NodeType } from "../interfaces";
+import { NodeType, SelectRangeEnum } from "../interfaces";
 import { INodeMaterial } from "../interfaces/material";
 import { createUuid } from "../utils/create-uuid";
 import { dealIcon, notifierIcon, routeIcon, sealIcon } from "../components/icons";
@@ -26,6 +26,8 @@ export const defaultMaterials: INodeMaterial[] = [
         icon: sealIcon,
         defaultConfig: {
             nodeType: NodeType.approver,
+            nodeUsers: [],
+            selectRange: SelectRangeEnum.user
         },
     },
     //通知人节点
@@ -36,7 +38,7 @@ export const defaultMaterials: INodeMaterial[] = [
         defaultConfig: {
             nodeType: NodeType.notifier,
         },
-
+        hidden: true,
     },
     {
         color: "#fb602d",
@@ -45,13 +47,13 @@ export const defaultMaterials: INodeMaterial[] = [
         defaultConfig: {
             nodeType: NodeType.audit,
         },
-
+        hidden: true,
     },
     //条件节点
     {
         color: "#15bc83",
         label: "routeNode",
-
+        hidden: true,
         icon: routeIcon,
         createDefault: () => {
             return {

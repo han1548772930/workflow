@@ -1,0 +1,143 @@
+{
+	"path": "",
+	"descriptors": [
+		{
+			"name": "微软雅黑",
+			"locals": [
+				"微软雅黑",
+				"MicrosoftYaHei"
+			],
+			"source": "/Workflow/fonts/SimHei.ttf"
+		},
+		{
+			"name": "微软雅黑 Light"
+			
+
+		},
+		{
+			"name": "等线"
+		},
+		{
+			"name": "等线 Light"
+			
+		},
+		{
+			"name": "宋体",
+			"source": "/Workflow/fonts/SimHei.ttf"
+
+
+		},
+		{
+			"name": "仿宋"
+		},
+		{
+			"name": "新宋体"
+		},
+		{
+			"name": "幼圆"
+		},
+		{
+			"name": "楷体"
+		},
+		{
+			"name": "隶书"
+		},
+		{
+			"name": "黑体",
+			"source": "/Workflow/fonts/SimHei.ttf"
+		},
+		{
+			"name": "Arial"
+		},
+		{
+			"name": "Arial Black"
+		},
+		{
+			"name": "Comic Sans MS"
+		},
+		{
+			"name": "Courier New"
+		},
+		{
+			"name": "Geneva"
+		},
+		{
+			"name": "Georgia"
+		},
+		{
+			"name": "Helvetica"
+		},
+		{
+			"name": "Impact"
+		},
+		{
+			"name": "Lucida Console"
+		},
+		{
+			"name": "Meiryo"
+		},
+		{
+			"name": "Meiryo UI"
+		},
+		{
+			"name": "MingLiU"
+		},
+		{
+			"name": "MingLiU-ExtB"
+		},
+		{
+			"name": "MS Gothic"
+		},
+		{
+			"name": "MS Mincho"
+		},
+		{
+			"name": "MS PGothic"
+		},
+		{
+			"name": "MS PMincho"
+		},
+		{
+			"name": "MS Song"
+		},
+		{
+			"name": "MS UI Gothic"
+		},
+		{
+			"name": "NSimSun"
+		},
+		{
+			"name": "Osaka"
+		},
+		{
+			"name": "PMingLiU"
+		},
+		{
+			"name": "PMingLiU-ExtB"
+		},
+		{
+			"name": "SimSun"
+		},
+		{
+			"name": "SimSun-ExtB"
+		},
+		{
+			"name": "Song"
+		},
+		{
+			"name": "Tahoma"
+		},
+		{
+			"name": "Times New Roman"
+		},
+		{
+			"name": "Trebuchet MS"
+		},
+		{
+			"name": "Verdana"
+		},
+		{
+			"name": "Yu Gothic"
+		}
+	]
+}
