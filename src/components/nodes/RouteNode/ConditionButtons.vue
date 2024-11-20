@@ -1,35 +1,21 @@
 <template>
   <div class="mini-bar container">
     <tooltip placement="topRight" title="复制条件" arrow>
-      <Button
-
-          type="text"
-          size="small"
-          shape="circle"
-          :icon="h(copyIcon as any, {style: {color: '#000'}}as any)"
-
-          @click="handleClone"
-      />
+      <Button type="text" size="small" shape="circle" :icon="h(copyIcon as any, { style: { color: '#000' } } as any)"
+        @click="handleClone" />
     </tooltip>
-    <Button
-
-        type="text"
-        size="small"
-        shape="circle"
-
-        :icon="h(CloseOutlined as any, {style: {color: '#000'}}as any)"
-        @click="handleClose"
-    />
+    <Button type="text" size="small" shape="circle" :icon="h(CloseOutlined as any, { style: { color: '#000' } } as any)"
+      @click.stop="handleClose" />
   </div>
 </template>
 
 <script setup lang="ts">
-import {IBranchNode, IRouteNode} from "@/interfaces";
+import { IBranchNode, IRouteNode } from "@/interfaces";
 import useNodeStore from "@/store/modules/node.ts";
-import {Tooltip, Button} from "ant-design-vue";
-import {h} from "vue";
-import {CloseOutlined} from "@ant-design/icons-vue";
-import {copyIcon} from "@/components/icons";
+import { Tooltip, Button } from "ant-design-vue";
+import { h } from "vue";
+import { CloseOutlined } from "@ant-design/icons-vue";
+import { copyIcon } from "@/components/icons";
 
 const props = defineProps<{
   parent: IRouteNode,
