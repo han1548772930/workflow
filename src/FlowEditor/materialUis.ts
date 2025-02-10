@@ -4,7 +4,7 @@ import ApproverSetters from "@/components/Setters/ApproverSetters.vue";
 import AuditSetters from "@/components/Setters/AuditSetters.vue";
 import ConditionSetters from "@/components/Setters/ConditionSetters.vue";
 import NotifierSetters from "@/components/Setters/NotifierSetters.vue";
-import { DefineComponent } from "vue";
+
 
 export const materialUis: IMaterialUIs = {
     //审批人物料UI
@@ -14,7 +14,7 @@ export const materialUis: IMaterialUIs = {
             secondary: true,
             content: "请选择审批人"
         },
-        settersPanel: ApproverSetters as DefineComponent,
+        settersPanel: ApproverSetters,
         handleConfirm: undefined,
         //校验，目前仅实现了空校验，其它校验过几天实现
         validate: (node: IWorkFlowNode) => {
@@ -30,7 +30,7 @@ export const materialUis: IMaterialUIs = {
             secondary: true,
             content: "请选择办理人"
         },
-        settersPanel: AuditSetters as DefineComponent,
+        settersPanel: AuditSetters,
         handleConfirm: undefined,
         //属性面板
         //校验函数
@@ -48,7 +48,7 @@ export const materialUis: IMaterialUIs = {
         defaultConfig: {
             content: "请设置条件"
         },
-        settersPanel: ConditionSetters as DefineComponent,
+        settersPanel: ConditionSetters,
         handleConfirm: undefined,
         //校验函数
         validate: (node: IWorkFlowNode) => {
@@ -60,7 +60,7 @@ export const materialUis: IMaterialUIs = {
     },
     //通知人节点
     [NodeType.notifier]: {
-        settersPanel: NotifierSetters as DefineComponent,
+        settersPanel: NotifierSetters,
         defaultConfig: {
             content: "请选择通知人"
         },

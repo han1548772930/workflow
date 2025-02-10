@@ -1,5 +1,5 @@
 import { IWorkFlowNode, NodeType } from "./workflow"
-import { DefineComponent } from "vue";
+import { DefineComponent, Component } from "vue";
 
 
 //节点物料
@@ -27,7 +27,7 @@ export interface defaultConfig {
 export interface IMaterialUI<FlowNode extends IWorkFlowNode> {
     //节点内容区
     defaultConfig?: defaultConfig,
-    settersPanel?: DefineComponent,
+    settersPanel?: Component,
     handleConfirm?: Function,
     //校验失败返回错误消息，成功返回ture
     validate?: (node: FlowNode) => string | false | undefined
