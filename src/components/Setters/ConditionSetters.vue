@@ -1,25 +1,30 @@
 <script setup lang="ts">
-import useNodeStore from "@/store/modules/node.ts";
-import { computed } from "vue";
+import ExpressionGroup from "@/components/ExpressionInput/ExpressionGroup.vue";
 
-const nodeStore = useNodeStore();
-const selectNodeId = computed(() => nodeStore.selectedNode);
-const selectNode = nodeStore.getNode(selectNodeId.value!)!;
-const materialUi = nodeStore.materialUis[selectNode?.nodeType]!;
+import { ExpressionGroupType, ExpressionNodeType, IExpressionGroup } from "@/interfaces";
+import { createUuid } from "@/utils/create-uuid";
+import { ref } from "vue";
 
+const rootExpression = ref({
+  id: "root",
+  nodeType: ExpressionNodeType.Group,
+  groupType: ExpressionGroupType.And,
+  children: [
+    {
+      id: createUuid(),
+      nodeType: ExpressionNodeType.Expression,
+    },
+  ],
+});
+function handleExpressionChange(exp: IExpressionGroup) {
+  rootExpression.value = exp;
+  console.log(rootExpression.value);
 
-
-materialUi.handleConfirm = () => {
-
-  nodeStore.selectedNode = undefined;
 }
-
 </script>
 
 <template>
-<div>ConditionSetters</div>
+  <ExpressionGroup :value="rootExpression" root :onChange="handleExpressionChange"></ExpressionGroup>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -2,7 +2,7 @@
   <div class="mini-bar container">
     <tooltip placement="topRight" title="复制条件" arrow>
       <Button type="text" size="small" shape="circle" :icon="h(copyIcon as any, { style: { color: '#000' } } as any)"
-        @click="handleClone" />
+        @click.stop="handleClone" />
     </tooltip>
     <Button type="text" size="small" shape="circle" :icon="h(CloseOutlined as any, { style: { color: '#000' } } as any)"
       @click.stop="handleClose" />
